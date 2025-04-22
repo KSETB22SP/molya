@@ -1,3 +1,101 @@
-@import url('./main-layout.css');
-@import url('./views/keikat-view.css');
-@import url('./views/gridwith-filters-view.css');
+/*@import url('./main-layout.css');*/
+/*@import url('./views/keikat-view.css');*/
+/*@import url('./views/gridwith-filters-view.css');*/
+:host([theme~="dark"]) {
+    --lumo-base-color: hsl(220, 10%, 10%);
+    --lumo-body-text-color: hsl(0, 0%, 90%);
+    --lumo-primary-color: hsl(0, 80%, 50%);
+    --lumo-primary-color-50pct: hsla(0, 0%, 50%, 0.5);
+    --lumo-primary-color-10pct: hsla(0, 80%, 50%, 0.1);
+    --lumo-success-color: hsl(146, 58%, 42%);
+    --lumo-error-color: hsl(0, 70%, 50%);
+    --lumo-border-radius: 0.5em;
+
+    --lumo-shade: hsl(220, 10%, 5%);
+    --lumo-shade-5pct: hsla(220, 10%, 5%, 0.05);
+    --lumo-shade-10pct: hsla(220, 10%, 5%, 0.1);
+    --lumo-shade-20pct: hsla(220, 10%, 5%, 0.2);
+    --lumo-shade-30pct: hsla(220, 10%, 5%, 0.3);
+    --lumo-shade-40pct: hsla(220, 10%, 5%, 0.4);
+    --lumo-shade-50pct: hsla(220, 10%, 5%, 0.5);
+
+    background-color: var(--lumo-base-color);
+    color: var(--lumo-body-text-color);
+}
+
+/*MainLayout*/
+vaadin-scroller[slot="drawer"] {
+    padding: var(--lumo-space-s);
+
+}
+
+vaadin-side-nav-item vaadin-icon {
+    padding: 0;
+}
+
+
+[slot="drawer"]:is(header, footer) {
+    display: flex;
+    align-items: center;
+    gap: var(--lumo-space-s);
+    padding: var(--lumo-space-s) var(--lumo-space-m);
+    min-height: var(--lumo-size-xl);
+    box-sizing: border-box;
+}
+
+[slot="drawer"]:is(header, footer):is(:empty) {
+    display: none;
+}
+
+/* Keikat-view */
+.keikat-view {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background-color: var(--lumo-base-color);
+}
+
+.keikat-view vaadin-split-layout {
+    width: 100%;
+    height: 100%;
+    background-color: var(--lumo-base-color);
+
+}
+
+.keikat-view vaadin-grid {
+    height: 100%;
+}
+
+
+.keikat-view .editor-layout {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+.keikat-view .editor {
+    flex-grow: 1;
+    padding: var(--lumo-space-l);
+
+}
+
+.keikat-view .editor vaadin-checkbox {
+    padding-top: var(--lumo-space-m);
+}
+
+.keikat-view .button-layout {
+    width: 100%;
+    flex-wrap: wrap;
+    background-color: var(--lumo-contrast-5pct);
+    padding-bottom: var(--lumo-space-s);
+    padding-top: var(--lumo-space-s);
+    padding-left: var(--lumo-space-l);
+    padding-right: var(--lumo-space-l);
+    gap: var(--lumo-space-m);
+
+}
+
+.keikat-view .grid-wrapper {
+    width: 100%;
+}
+

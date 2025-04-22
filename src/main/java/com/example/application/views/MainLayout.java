@@ -8,12 +8,16 @@ import com.vaadin.flow.component.html.Header;
 import com.vaadin.flow.component.html.Span;
 import com.vaadin.flow.component.icon.SvgIcon;
 import com.vaadin.flow.component.orderedlayout.Scroller;
+import com.vaadin.flow.component.page.AppShellConfigurator;
 import com.vaadin.flow.component.sidenav.SideNav;
 import com.vaadin.flow.component.sidenav.SideNavItem;
 import com.vaadin.flow.router.Layout;
+import com.vaadin.flow.server.PWA;
 import com.vaadin.flow.server.auth.AnonymousAllowed;
 import com.vaadin.flow.server.menu.MenuConfiguration;
 import com.vaadin.flow.server.menu.MenuEntry;
+import com.vaadin.flow.theme.Theme;
+import com.vaadin.flow.theme.lumo.Lumo;
 import com.vaadin.flow.theme.lumo.LumoUtility;
 import java.util.List;
 
@@ -22,6 +26,7 @@ import java.util.List;
  */
 @Layout
 @AnonymousAllowed
+
 public class MainLayout extends AppLayout {
 
     private H1 viewTitle;

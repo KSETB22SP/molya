@@ -36,6 +36,9 @@ public class KeikatService {
     public Page<Keikat> list(Pageable pageable, Specification<Keikat> filter) {
         return repository.findAll(filter, pageable);
     }
+    public Page<Keikat> list(Specification<Keikat> spec, Pageable pageable){
+        return repository.findAll(spec, pageable);
+    }
 
     public int count() {
         return (int) repository.count();

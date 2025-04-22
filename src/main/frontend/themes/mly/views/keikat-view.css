@@ -13,6 +13,7 @@
   height: 100%;
 }
 
+
 .keikat-view .editor-layout {
   display: flex;
   flex-direction: column;
@@ -22,6 +23,7 @@
 .keikat-view .editor {
   flex-grow: 1;
   padding: var(--lumo-space-l);
+
 }
 
 .keikat-view .editor vaadin-checkbox {
@@ -37,8 +39,10 @@
   padding-left: var(--lumo-space-l);
   padding-right: var(--lumo-space-l);
   gap: var(--lumo-space-m);
+
 }
 
 .keikat-view .grid-wrapper {
   width: 100%;
 }
+
