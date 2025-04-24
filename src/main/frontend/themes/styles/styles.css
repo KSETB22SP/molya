@@ -1,8 +1,8 @@
 /*@import url('./main-layout.css');*/
-/*@import url('./views/keikat-view.css');*/
-/*@import url('./views/gridwith-filters-view.css');*/
-:host([theme~="dark"]) {
-    --lumo-base-color: hsl(220, 10%, 10%);
+
+:host() {
+    --lumo-base-color: hsl(214, 35%, 21%);
+
     --lumo-body-text-color: hsl(0, 0%, 90%);
     --lumo-primary-color: hsl(0, 80%, 50%);
     --lumo-primary-color-50pct: hsla(0, 0%, 50%, 0.5);
@@ -23,7 +23,7 @@
     color: var(--lumo-body-text-color);
 }
 
-/*MainLayout*/
+/*!*MainLayout*!*/
 vaadin-scroller[slot="drawer"] {
     padding: var(--lumo-space-s);
 
@@ -47,7 +47,7 @@ vaadin-side-nav-item vaadin-icon {
     display: none;
 }
 
-/* Keikat-view */
+/*!* Keikat-view *!*/
 .keikat-view {
     display: flex;
     flex-direction: column;
@@ -59,11 +59,12 @@ vaadin-side-nav-item vaadin-icon {
     width: 100%;
     height: 100%;
     background-color: var(--lumo-base-color);
-
+    background-color: var(--lumo-base-color);
 }
 
 .keikat-view vaadin-grid {
     height: 100%;
+
 }
 
 
@@ -71,6 +72,7 @@ vaadin-side-nav-item vaadin-icon {
     display: flex;
     flex-direction: column;
     width: 400px;
+
 }
 
 .keikat-view .editor {
@@ -82,8 +84,8 @@ vaadin-side-nav-item vaadin-icon {
 .keikat-view .editor vaadin-checkbox {
     padding-top: var(--lumo-space-m);
 }
-
 .keikat-view .button-layout {
+/*.keikat-view .button-layout {*/
     width: 100%;
     flex-wrap: wrap;
     background-color: var(--lumo-contrast-5pct);
@@ -92,7 +94,6 @@ vaadin-side-nav-item vaadin-icon {
     padding-left: var(--lumo-space-l);
     padding-right: var(--lumo-space-l);
     gap: var(--lumo-space-m);
-
 }
 
 .keikat-view .grid-wrapper {
