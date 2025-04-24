@@ -1,10 +1,11 @@
 package com.example.application.data;
 
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;
 import java.time.LocalDate;
 
 @Entity
+@Table(name="SAMPLE_PERSON")
 public class SamplePerson extends AbstractEntity {
 
     private String firstName;
@@ -16,6 +17,12 @@ public class SamplePerson extends AbstractEntity {
     private String occupation;
     private String role;
     private boolean important;
+
+
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     public String getFirstName() {
         return firstName;
@@ -64,6 +71,16 @@ public class SamplePerson extends AbstractEntity {
     }
     public void setImportant(boolean important) {
         this.important = important;
+    }
+
+    @Override
+    public Long getId() {
+        return id;
+    }
+
+    @Override
+    public void setId(Long id) {
+        this.id = id;
     }
 
 }

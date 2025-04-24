@@ -1,15 +1,20 @@
 package com.example.application.data;
 
-import jakarta.persistence.Entity;
+import jakarta.persistence.*;
+
 import java.time.LocalDateTime;
 
 @Entity
+@Table(name="KEIKAT")
 public class Keikat extends AbstractEntity {
 
     private String artisti;
     private String sijainti;
     private Integer hinta;
     private LocalDateTime ajankohta;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
     public String getArtisti() {
         return artisti;
@@ -36,4 +41,13 @@ public class Keikat extends AbstractEntity {
         this.ajankohta = ajankohta;
     }
 
+    @Override
+    public Long getId() {
+        return id;
+    }
+
+    @Override
+    public void setId(Long id) {
+        this.id = id;
+    }
 }
