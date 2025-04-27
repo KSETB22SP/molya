@@ -21,9 +21,8 @@ import org.springframework.context.annotation.Bean;
  *
  */
 @SpringBootApplication
-@PWA(name = "mly", shortName = "Molya")
-@Theme(value = "styles", variant = Lumo.DARK)
-public class Application implements AppShellConfigurator {
+
+public class Application  {
 
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);

@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api/keikat")
+@RequestMapping("/keikat")
 public class KeikatController {
 
     private final KeikatRepository keikatRepository;

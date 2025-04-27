@@ -13,6 +13,7 @@ import com.vaadin.flow.component.page.AppShellConfigurator;
 import com.vaadin.flow.component.sidenav.SideNav;
 import com.vaadin.flow.component.sidenav.SideNavItem;
 import com.vaadin.flow.router.Layout;
+import com.vaadin.flow.router.Route;
 import com.vaadin.flow.server.PWA;
 import com.vaadin.flow.server.auth.AnonymousAllowed;
 import com.vaadin.flow.server.menu.MenuConfiguration;
@@ -20,6 +21,8 @@ import com.vaadin.flow.server.menu.MenuEntry;
 import com.vaadin.flow.theme.Theme;
 import com.vaadin.flow.theme.lumo.Lumo;
 import com.vaadin.flow.theme.lumo.LumoUtility;
+import jakarta.annotation.security.PermitAll;
+import jakarta.annotation.security.RolesAllowed;
 import org.springframework.context.annotation.Import;
 
 import java.util.List;
@@ -27,7 +30,9 @@ import java.util.List;
 /**
  * The main view is a top-level placeholder for other views.
  */
+@Route("main-layout")
 @Layout
+@PermitAll
 @AnonymousAllowed
 
 public class MainLayout extends AppLayout {

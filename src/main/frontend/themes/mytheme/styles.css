@@ -1,28 +1,33 @@
-@import url('./main-layout.css');
-
-:host() {
-    --lumo-base-color: hsl(214, 35%, 21%);
-
-    --lumo-body-text-color: hsl(0, 0%, 90%);
-    --lumo-primary-color: hsl(0, 80%, 50%);
-    --lumo-primary-color-50pct: hsla(0, 0%, 50%, 0.5);
-    --lumo-primary-color-10pct: hsla(0, 80%, 50%, 0.1);
-    --lumo-success-color: hsl(146, 58%, 42%);
-    --lumo-error-color: hsl(0, 70%, 50%);
-    --lumo-border-radius: 0.5em;
-
-    --lumo-shade: hsl(220, 10%, 5%);
-    --lumo-shade-5pct: hsla(220, 10%, 5%, 0.05);
-    --lumo-shade-10pct: hsla(220, 10%, 5%, 0.1);
-    --lumo-shade-20pct: hsla(220, 10%, 5%, 0.2);
-    --lumo-shade-30pct: hsla(220, 10%, 5%, 0.3);
-    --lumo-shade-40pct: hsla(220, 10%, 5%, 0.4);
-    --lumo-shade-50pct: hsla(220, 10%, 5%, 0.5);
-
-    background-color: var(--lumo-base-color);
-    color: var(--lumo-body-text-color);
+:root {
+    --lumo-base-color: #1e1e1e; /* Dark background */
+    --lumo-primary-color: #8B0000; /* Dark red */
+    --lumo-primary-text-color: #ff6666;
+    --lumo-body-text-color: #cccccc;
+    --lumo-header-text-color: #ffffff;
+    --lumo-success-color: #2e7d32;
+    --lumo-error-color: #d32f2f;
 }
 
+/* Placeholder text white */
+vaadin-text-field::part(input)::placeholder,
+vaadin-integer-field::part(input)::placeholder {
+    color: white;
+    opacity: 1;
+}
+
+/* Labels white */
+vaadin-text-field::part(label),
+vaadin-integer-field::part(label) {
+    color: white;
+    font-weight: bold;
+}
+
+
+/* Optional: style the login form if you have it */
+vaadin-login-form {
+    background-color: #2c2c2c;
+    border-radius: 8px;
+}
 /*!*MainLayout*!*/
 vaadin-scroller[slot="drawer"] {
     padding: var(--lumo-space-s);
@@ -79,13 +84,14 @@ vaadin-side-nav-item vaadin-icon {
     flex-grow: 1;
     padding: var(--lumo-space-l);
 
+
 }
 
 .keikat-view .editor vaadin-checkbox {
     padding-top: var(--lumo-space-m);
 }
 .keikat-view .button-layout {
-/*.keikat-view .button-layout {*/
+    /*.keikat-view .button-layout {*/
     width: 100%;
     flex-wrap: wrap;
     background-color: var(--lumo-contrast-5pct);
@@ -99,4 +105,12 @@ vaadin-side-nav-item vaadin-icon {
 .keikat-view .grid-wrapper {
     width: 100%;
 }
+--vaadin-input-field-border-color{
+    background-color: white;
+}
+
+--vaadin-integer-field-border-color{
+    background-color: white;
+}
+
 

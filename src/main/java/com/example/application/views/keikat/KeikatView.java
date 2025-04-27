@@ -43,15 +43,19 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
+import com.vaadin.flow.theme.Theme;
 import com.vaadin.flow.theme.lumo.LumoUtility;
+import jakarta.annotation.security.PermitAll;
 import jakarta.persistence.criteria.*;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.orm.ObjectOptimisticLockingFailureException;
 import org.vaadin.lineawesome.LineAwesomeIconUrl;
 
 @PageTitle("Keikat")
+//@Theme("mytheme")
 @Route("/:keikatID?/:action?(edit)")
 @Menu(order = 0, icon = LineAwesomeIconUrl.MUSIC_SOLID)
+@PermitAll
 @RouteAlias("")
 public class KeikatView extends Div implements BeforeEnterObserver {
 
